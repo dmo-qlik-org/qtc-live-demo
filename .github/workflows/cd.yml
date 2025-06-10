@@ -32,17 +32,17 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      - name: Setup Python
+      - name: setup python
         uses: actions/setup-python@v5.6.0
         with:
           # Version range or exact version of Python or PyPy to use, using SemVer's version range syntax. Reads from .python-version if unset.
-          python-version: 3.11.13 # optional
+          python-version: '3.11.13' # optional
           # File containing the Python version to use. Example: .python-version
           # python-version-file: # optional
           # Used to specify a package manager for caching in the default directory. Supported values: pip, pipenv, poetry.
-          cache: pip # optional
+          cache: 'pip' # optional
           # The target architecture (x86, x64, arm64) of the Python or PyPy interpreter.
-          architecture: x64 # optional
+          architecture: 'x64' # optional
           # Set this option if you want the action to check for the latest available version that satisfies the version spec.
           # check-latest: # optional
           # The token used to authenticate when fetching Python distributions from https://github.com/actions/python-versions. When running this action on github.com, the default value is sufficient. When running on GHES, you can pass a personal access token for github.com if you are experiencing rate limiting.
@@ -55,3 +55,7 @@ jobs:
           # allow-prereleases: # optional
           # When 'true', use the freethreaded version of Python.
           # freethreaded: # optional
+      - name: setup dependencies
+        run: |
+          pip install -r requirements.txt
+          pip test
