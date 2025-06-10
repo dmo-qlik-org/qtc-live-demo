@@ -1,0 +1,23 @@
+{
+  "id": "customer-cz1f",
+  "name": "customer",
+  "type": "STORAGE",
+  "inputDatasets": [
+    {
+      "datasetId": "customer",
+      "name": "customer",
+      "projectId": "{{ref(project.current.projectId)}}",
+      "taskId": "customer_landing-cz1c"
+    }
+  ],
+  "datasetAttributes": {
+    "materialized": "INHERIT",
+    "hasHistory": "INHERIT",
+    "hasLiveViews": "INHERIT",
+    "hasChanges": "INHERIT",
+    "hasStandardViewsWithHeaders": "INHERIT",
+    "watermarkIncrementalSettings": "INHERIT"
+  },
+  "virtualDataset": false,
+  "description": ""
+}

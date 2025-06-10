@@ -1,0 +1,19 @@
+{
+  "sourceConnection": "{{task.customer_landing-cz1c.sourceConnection}}",
+  "includePatterns": [],
+  "excludePatterns": [],
+  "explicitlySelected": [
+    {
+      "name": "customer",
+      "schema": "{{task.customer_landing-cz1c:null$_$sakila.schema}}",
+      "type": "TABLE",
+      "sourceTableId": "$replicate$sakila_customer"
+    },
+    {
+      "name": "dept_emp",
+      "schema": "{{task.customer_landing-cz1c:null$_$employees.schema}}",
+      "type": "TABLE",
+      "sourceTableId": "$replicate$employees_dept_emp"
+    }
+  ]
+}

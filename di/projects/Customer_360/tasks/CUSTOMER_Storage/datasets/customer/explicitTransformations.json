@@ -1,0 +1,102 @@
+{
+  "transformedTableLocal": {
+    "transformedColumnsLocal": [
+      {
+        "action": "ADD",
+        "columnName": "test_column1",
+        "newDataType": {
+          "type": "BOOLEAN",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": ""
+        },
+        "expression": {
+          "expressionStatement": "",
+          "alias": []
+        },
+        "primaryKeyOrdinal": 0,
+        "ordinal": 0,
+        "nullable": true,
+        "addedColumnId": "9cc0635b-24b0-4127-a1eb-d753ce5a731e",
+        "markAsMetadata": false
+      },
+      {
+        "action": "ADD",
+        "columnName": "test_column2",
+        "newDataType": {
+          "type": "BOOLEAN",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": ""
+        },
+        "expression": {
+          "expressionStatement": "",
+          "alias": []
+        },
+        "primaryKeyOrdinal": 0,
+        "ordinal": 0,
+        "nullable": true,
+        "addedColumnId": "adc3450e-548f-4384-8ce3-e51396bffc52",
+        "markAsMetadata": false
+      },
+      {
+        "action": "ADD",
+        "columnName": "test_column3",
+        "newDataType": {
+          "type": "BOOLEAN",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": ""
+        },
+        "expression": {
+          "expressionStatement": "",
+          "alias": []
+        },
+        "primaryKeyOrdinal": 0,
+        "ordinal": 0,
+        "nullable": true,
+        "addedColumnId": "48b421e4-0931-4eef-a3f3-e8fc4cf98e42",
+        "markAsMetadata": false
+      },
+      {
+        "action": "ADD",
+        "columnName": "test_column4",
+        "newDataType": {
+          "type": "BOOLEAN",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": ""
+        },
+        "expression": {
+          "expressionStatement": "",
+          "alias": []
+        },
+        "primaryKeyOrdinal": 0,
+        "ordinal": 0,
+        "nullable": true,
+        "addedColumnId": "0a52f9d2-1ab8-4012-83b5-1b1b910b8c10",
+        "markAsMetadata": false
+      }
+    ]
+  },
+  "datasetId": "customer-cz1f",
+  "actionType": "LOCAL_MANIPULATION",
+  "scopeType": "COLUMN",
+  "scope": {
+    "whereOwnerName": "%",
+    "whereTableName": "customer",
+    "whereColumnName": "%",
+    "whereDatatype": "UNSPECIFIED",
+    "whereColumnKeyAttribute": "ANY",
+    "whereColumnNullability": "ANY"
+  },
+  "enabled": true,
+  "internalRule": false,
+  "name": "customer",
+  "id": "customer-bsyz",
+  "description": ""
+}

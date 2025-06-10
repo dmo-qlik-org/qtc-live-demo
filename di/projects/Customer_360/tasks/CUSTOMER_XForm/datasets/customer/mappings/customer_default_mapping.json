@@ -1,0 +1,193 @@
+{
+  "sourceDataEntityKey": {
+    "datasetId": "customer-cz1f",
+    "name": "customer",
+    "projectId": "{{ref(project.current.projectId)}}",
+    "taskId": "customer_storage-cz1d"
+  },
+  "mappingFields": [
+    {
+      "columnId": "customer_id",
+      "expression": {
+        "expressionStatement": "${customer_id}",
+        "alias": [
+          {
+            "name": "customer_id",
+            "value": "customer_id"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "store_id",
+      "expression": {
+        "expressionStatement": "${store_id}",
+        "alias": [
+          {
+            "name": "store_id",
+            "value": "store_id"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "first_name",
+      "expression": {
+        "expressionStatement": "${first_name}",
+        "alias": [
+          {
+            "name": "first_name",
+            "value": "first_name"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "last_name",
+      "expression": {
+        "expressionStatement": "${last_name}",
+        "alias": [
+          {
+            "name": "last_name",
+            "value": "last_name"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "email",
+      "expression": {
+        "expressionStatement": "${email}",
+        "alias": [
+          {
+            "name": "email",
+            "value": "email"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "address_id",
+      "expression": {
+        "expressionStatement": "${address_id}",
+        "alias": [
+          {
+            "name": "address_id",
+            "value": "address_id"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "active",
+      "expression": {
+        "expressionStatement": "${active}",
+        "alias": [
+          {
+            "name": "active",
+            "value": "active"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "create_date",
+      "expression": {
+        "expressionStatement": "${create_date}",
+        "alias": [
+          {
+            "name": "create_date",
+            "value": "create_date"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "last_update",
+      "expression": {
+        "expressionStatement": "${last_update}",
+        "alias": [
+          {
+            "name": "last_update",
+            "value": "last_update"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "new_column_ddl1-312c",
+      "expression": {
+        "expressionStatement": "${new_column_ddl1}",
+        "alias": [
+          {
+            "name": "new_column_ddl1",
+            "value": "new_column_ddl1"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "new_column_ddl2-1643",
+      "expression": {
+        "expressionStatement": "${new_column_ddl2}",
+        "alias": [
+          {
+            "name": "new_column_ddl2",
+            "value": "new_column_ddl2"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "9cc0635b-24b0-4127-a1eb-d753ce5a731e",
+      "expression": {
+        "expressionStatement": "${test_column1}",
+        "alias": [
+          {
+            "name": "test_column1",
+            "value": "test_column1"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "adc3450e-548f-4384-8ce3-e51396bffc52",
+      "expression": {
+        "expressionStatement": "${test_column2}",
+        "alias": [
+          {
+            "name": "test_column2",
+            "value": "test_column2"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "48b421e4-0931-4eef-a3f3-e8fc4cf98e42",
+      "expression": {
+        "expressionStatement": "${test_column3}",
+        "alias": [
+          {
+            "name": "test_column3",
+            "value": "test_column3"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "0a52f9d2-1ab8-4012-83b5-1b1b910b8c10",
+      "expression": {
+        "expressionStatement": "${test_column4}",
+        "alias": [
+          {
+            "name": "test_column4",
+            "value": "test_column4"
+          }
+        ]
+      }
+    }
+  ],
+  "id": "customer_default_mapping-ww9q",
+  "name": "customer_default_mapping",
+  "description": ""
+}

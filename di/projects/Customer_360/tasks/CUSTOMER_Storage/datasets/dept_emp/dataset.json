@@ -1,0 +1,23 @@
+{
+  "id": "dept_emp-1aqn",
+  "name": "dept_emp",
+  "type": "STORAGE",
+  "inputDatasets": [
+    {
+      "datasetId": "dept_emp",
+      "name": "dept_emp",
+      "projectId": "{{ref(project.current.projectId)}}",
+      "taskId": "customer_landing-cz1c"
+    }
+  ],
+  "datasetAttributes": {
+    "materialized": "INHERIT",
+    "hasHistory": "INHERIT",
+    "hasLiveViews": "INHERIT",
+    "hasChanges": "INHERIT",
+    "hasStandardViewsWithHeaders": "INHERIT",
+    "watermarkIncrementalSettings": "INHERIT"
+  },
+  "virtualDataset": false,
+  "description": ""
+}
