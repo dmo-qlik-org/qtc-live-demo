@@ -56,6 +56,4 @@ jobs:
           # When 'true', use the freethreaded version of Python.
           # freethreaded: # optional
       - name: setup dependencies
-        run: |
-          pip install -r requirements.txt
-          pip test
+        run: pip install -r requirements.txt
