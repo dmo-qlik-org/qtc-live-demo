@@ -91,5 +91,5 @@ jobs:
           qtc_tenant_name: ${{ secrets.QTC_TENANT_NAME }}
           qtc_token: ${{ secrets.QTC_TOKEN }}
         run: |
-          echo "$changed_files"
+          echo "$OUTPUT1"
           
