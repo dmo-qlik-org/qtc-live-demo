@@ -17,7 +17,8 @@ jobs:
     name: run_on_pr_or_push
     runs-on: ubuntu-latest
     outputs:
-      output1: ${{ steps.step3.outputs.result }}
+      output1: ${{ steps.step2.outputs.changedFiles }}
+      output2: ${{ steps.step3.outputs.result }}
     steps:
       - name: checkout
         id: step1
@@ -40,7 +41,7 @@ jobs:
               lastCommit='${{ github.event.head_ref }}'
               ;;
           esac
-          changedFiles=$(git diff --name-only --diff-filter=d "${firstCommit}~1" "${lastCommit}")
+          echo changedFiles=$(git diff --name-only --diff-filter=d "${firstCommit}~1" "${lastCommit}") >> "$GITHUB_OUTPUT"
           
       - name: test output
         id: step3
