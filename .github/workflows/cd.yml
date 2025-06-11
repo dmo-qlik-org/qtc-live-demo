@@ -87,11 +87,9 @@ jobs:
           qtc_tenant_name: ${{ secrets.QTC_TENANT_NAME }}
           qtc_token: ${{ secrets.QTC_TOKEN }}
         run: |
-          if $OUTPUT1
-          then
+          [ -n "$OUTPUT1" ] &&
           while IFS= read -r line; do
             echo "$line"
             zip -r "$line_$(date -u +"%Y-%m-%dT%H-%M-%SZ")" "di/projects/$line/"
           done <<< "$OUTPUT1"
-          fi
           ls
