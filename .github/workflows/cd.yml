@@ -49,12 +49,13 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - env:
+      - name: test
+        env:
           OUTPUT1: ${{needs.get_files.outputs.output1}}
           qtc_region_name: ${{ secrets.QTC_REGION_NAME }}
           qtc_tenant_name: ${{ secrets.QTC_TENANT_NAME }}
           qtc_token: ${{ secrets.QTC_TOKEN }}
-        run: echo "$OUTPUT1"
+        run: echo "$test"
         
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
