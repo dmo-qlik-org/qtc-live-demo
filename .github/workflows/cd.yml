@@ -25,8 +25,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Modified files
-        id: step2
+      - id: step2
         run: |
           case '${{ github.event_name }}' in
             push)
