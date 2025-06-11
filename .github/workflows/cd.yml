@@ -39,7 +39,7 @@ jobs:
               ;;
           esac
           changedFiles=$(git diff --name-only --diff-filter=d "${firstCommit}~1" "${lastCommit}")
-          echo "$changedFiles"
+          echo "$changedFiles" >> "$GITHUB_OUTPUT"
           
   build:
     # The type of runner that the job will run on
