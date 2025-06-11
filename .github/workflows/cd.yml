@@ -80,12 +80,15 @@ jobs:
           # freethreaded: # optional
       - name: setup dependencies
         run: pip install -r requirements.txt
+      - name: setup tools
+        uses: actions/checkout@v4
+        with:
+          repository: dmo-qlik-org/qtc-sdk
+          token: ${{ secrets.PAT }}
+          path: tools
       - name: zip changes
         env:
           OUTPUT1: ${{needs.get_files.outputs.output1}}
-          qtc_region_name: ${{ secrets.QTC_REGION_NAME }}
-          qtc_tenant_name: ${{ secrets.QTC_TENANT_NAME }}
-          qtc_token: ${{ secrets.QTC_TOKEN }}
         run: |
           [ -n "$OUTPUT1" ] &&
           while IFS= read -r line; do
@@ -96,8 +99,9 @@ jobs:
           done <<< "$OUTPUT1"
           ls
       - name: deploy
-        uses: actions/checkout@v4
-        with:
-          repository: dmo-qlik-org/qtc-sdk
-          token: ${{ secrets.PAT }}
-          path: tools
+        env:
+          qtc_region_name: ${{ secrets.QTC_REGION_NAME }}
+          qtc_tenant_name: ${{ secrets.QTC_TENANT_NAME }}
+          qtc_token: ${{ secrets.QTC_TOKEN }}
+        run: |
+          ls -lah
