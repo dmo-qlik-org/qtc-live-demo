@@ -54,6 +54,8 @@ jobs:
           qtc_region_name: ${{ secrets.QTC_REGION_NAME }}
           qtc_tenant_name: ${{ secrets.QTC_TENANT_NAME }}
           qtc_token: ${{ secrets.QTC_TOKEN }}
+        run: echo "$OUTPUT1"
+        
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
@@ -91,6 +93,4 @@ jobs:
           # freethreaded: # optional
       - name: setup dependencies
         run: pip install -r requirements.txt
-      - name: deploy project
-        run: echo "$OUTPUT1"
           
