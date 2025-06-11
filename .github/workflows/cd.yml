@@ -17,7 +17,7 @@ jobs:
     name: run_on_pr_or_push
     runs-on: ubuntu-latest
     outputs:
-      output1: ${{ steps.step2.outputs.test }}
+      output1: ${{ steps.step3.outputs.result }}
     steps:
       - name: checkout
         id: step1
@@ -41,11 +41,15 @@ jobs:
               ;;
           esac
           changedFiles=$(git diff --name-only --diff-filter=d "${firstCommit}~1" "${lastCommit}")
-          echo "test=hello" >> "$GITHUB_OUTPUT"
+          
+      - name: test output
+        id: step3
+        run: echo "result=hello" >> "$GITHUB_OUTPUT"
           
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    needs: get_files
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -55,7 +59,7 @@ jobs:
           qtc_region_name: ${{ secrets.QTC_REGION_NAME }}
           qtc_tenant_name: ${{ secrets.QTC_TENANT_NAME }}
           qtc_token: ${{ secrets.QTC_TOKEN }}
-        run: echo "$test"
+        run: echo "$OUTPUT1"
         
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
