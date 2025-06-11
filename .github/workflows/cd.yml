@@ -41,7 +41,7 @@ jobs:
               lastCommit='${{ github.event.head_ref }}'
               ;;
           esac
-          echo "changedFiles=$(git diff --name-only --diff-filter=d "${firstCommit}~1" "${lastCommit}")" >> "$GITHUB_OUTPUT"
+          echo "changedFiles=$(git diff --name-only --diff-filter=d "${lastCommit}" "${firstCommit}")" >> "$GITHUB_OUTPUT"
           
       - name: test output
         id: step3
