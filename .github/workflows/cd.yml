@@ -90,6 +90,6 @@ jobs:
           [ -n "$OUTPUT1" ] &&
           while IFS= read -r line; do
             echo "$line"
-            zip -r "$line_$(date -u +"%Y-%m-%dT%H-%M-%SZ")" "di/projects/$line/"
+            zip -r "$($line + date -u +"%Y-%m-%dT%H-%M-%SZ")" "di/projects/$line/"
           done <<< "$OUTPUT1"
           ls
