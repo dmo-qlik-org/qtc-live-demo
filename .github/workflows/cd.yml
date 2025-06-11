@@ -89,8 +89,7 @@ jobs:
         run: |
           [ -n "$OUTPUT1" ] &&
           while IFS= read -r line; do
-            $project=$line
-            echo "$project"
-            zip -r "$project_$(date -u +"%Y-%m-%dT%H-%M-%SZ")" "di/projects/$project/"
+            echo "$line"
+            zip -r "$line_$(date -u +"%Y-%m-%dT%H-%M-%SZ")" "di/projects/$line/"
           done <<< "$OUTPUT1"
           ls
