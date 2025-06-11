@@ -80,7 +80,7 @@ jobs:
           # freethreaded: # optional
       - name: setup dependencies
         run: pip install -r requirements.txt
-      - name: deploy
+      - name: zip changes
         env:
           OUTPUT1: ${{needs.get_files.outputs.output1}}
           qtc_region_name: ${{ secrets.QTC_REGION_NAME }}
@@ -95,3 +95,9 @@ jobs:
             zip -r "$zipName" "di/projects/$line/"
           done <<< "$OUTPUT1"
           ls
+      - name: deploy
+        uses: actions/checkout@v4
+        with:
+          repository: dmo-qlik-org/qtc-sdk
+          token: ${{ secrets.PAT }}
+          path: tools
