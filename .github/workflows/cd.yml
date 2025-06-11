@@ -13,7 +13,34 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
+  get_files:
+    name: run_on_pr_or_push
+    runs-on: ubuntu-latest
+    outputs:
+      output1: ${{ steps.step2.outputs.test }}
+    steps:
+      - name: Checkout code
+        id: step1
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 0
+
+      - name: Modified files
+        id: step2
+        run: |
+          case '${{ github.event_name }}' in
+            push)
+              firstCommit='${{ github.event.commits[0].id }}'
+              lastCommit='${{ github.event.commits[-1].id }}'
+              ;;
+            pull_request)
+              firstCommit='${{ github.event.base_ref }}'
+              lastCommit='${{ github.event.head_ref }}'
+              ;;
+          esac
+          changedFiles=$(git diff --name-only --diff-filter=d "${firstCommit}~1" "${lastCommit}")
+          echo changedFiles >> "$GITHUB_OUTPUT"
+          
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -59,10 +86,10 @@ jobs:
         run: pip install -r requirements.txt
       - name: deploy project
         env:
+          changed_files: ${{needs.job1.outputs.output1}}
           qtc_region_name: ${{ secrets.QTC_REGION_NAME }}
           qtc_tenant_name: ${{ secrets.QTC_TENANT_NAME }}
           qtc_token: ${{ secrets.QTC_TOKEN }}
         run: |
-          echo deploying project
-          
+          echo "$changed_files"
           
