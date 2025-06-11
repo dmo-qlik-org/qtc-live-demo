@@ -14,7 +14,6 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   get_files:
-    name: run_on_pr_or_push
     runs-on: ubuntu-latest
     outputs:
       output1: ${{ steps.step2.outputs.changedFiles }}
@@ -25,12 +24,9 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: modified files
+      - name: get modified projects
         id: step2
         run: |
-          #!/bin/bash
-          
           case '${{ github.event_name }}' in
             push)
               firstCommit='${{ github.event.commits[0].id }}'
@@ -41,8 +37,7 @@ jobs:
               lastCommit='${{ github.event.head_ref }}'
               ;;
           esac
-          echo "changedFiles=$(git diff --name-only --diff-filter=d "${lastCommit}" "${firstCommit}" | xargs -L1 dirname | uniq | grep -o "$(ls di/projects)")" >> "$GITHUB_OUTPUT"
-          
+          echo "changedFiles=$(git diff --name-only --diff-filter=d "${lastCommit}" "${firstCommit}" | xargs -L1 dirname | uniq | grep -o "$(ls di/projects)")" >> "$GITHUB_OUTPUT"   
       - name: test output
         id: step3
         run: echo "result=hello" >> "$GITHUB_OUTPUT"
@@ -55,17 +50,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: test
-        env:
-          OUTPUT1: ${{needs.get_files.outputs.output1}}
-          qtc_region_name: ${{ secrets.QTC_REGION_NAME }}
-          qtc_tenant_name: ${{ secrets.QTC_TENANT_NAME }}
-          qtc_token: ${{ secrets.QTC_TOKEN }}
-        run: echo "$OUTPUT1"
-        
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-
+      # sets up python environment for deployment utilities
       - name: setup python
         uses: actions/setup-python@v5.6.0
         with:
@@ -91,4 +78,11 @@ jobs:
           # freethreaded: # optional
       - name: setup dependencies
         run: pip install -r requirements.txt
+      - name: deploy
+        env:
+          OUTPUT1: ${{needs.get_files.outputs.output1}}
+          qtc_region_name: ${{ secrets.QTC_REGION_NAME }}
+          qtc_tenant_name: ${{ secrets.QTC_TENANT_NAME }}
+          qtc_token: ${{ secrets.QTC_TOKEN }}
+        run: echo "$OUTPUT1"
           
