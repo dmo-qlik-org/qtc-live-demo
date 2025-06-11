@@ -1,0 +1,36 @@
+{
+  "id": "customer_thin-v3va",
+  "name": "customer_thin",
+  "type": "CUSTOM",
+  "inputDatasets": [
+    {
+      "datasetId": "customer-gkwo",
+      "name": "customer",
+      "projectId": "{{ref(project.current.projectId)}}",
+      "taskId": "customer_xform2-hya-"
+    }
+  ],
+  "datasetAttributes": {
+    "materialized": "INHERIT",
+    "hasHistory": "INHERIT",
+    "hasLiveViews": "INHERIT",
+    "hasChanges": "INHERIT",
+    "hasStandardViewsWithHeaders": "INHERIT",
+    "watermarkIncrementalSettings": "INHERIT"
+  },
+  "tableDef": {
+    "name": "customer_thin",
+    "columns": [],
+    "secureQri": "",
+    "fullLoadOnly": false
+  },
+  "customDatasetSettings": {
+    "customSql": {
+      "expressionStatement": "",
+      "alias": []
+    },
+    "incremental": false
+  },
+  "virtualDataset": false,
+  "description": ""
+}
