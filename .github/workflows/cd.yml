@@ -37,9 +37,9 @@ jobs:
               lastCommit='${{ github.event.head_ref }}'
               ;;
           esac
-          echo "foo<<EOF" >> "$GITHUB_OUTPUT" 
+          # echo "foo<<EOF" >> "$GITHUB_OUTPUT" 
           echo "changedFiles=$(git diff --name-only --diff-filter=d "${lastCommit}" "${firstCommit}" | xargs -L1 dirname | uniq | grep -o "$(ls di/projects)")" >> "$GITHUB_OUTPUT"
-          echo "EOF" >> "$GITHUB_OUTPUT" 
+          # echo "EOF" >> "$GITHUB_OUTPUT" 
       - name: test output
         id: step3
         run: echo "result=hello" >> "$GITHUB_OUTPUT"
