@@ -20,6 +20,7 @@ jobs:
       output1: ${{ steps.step2.outputs.test }}
     steps:
       - name: checkout
+        id: step1
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -40,7 +41,7 @@ jobs:
               ;;
           esac
           changedFiles=$(git diff --name-only --diff-filter=d "${firstCommit}~1" "${lastCommit}")
-          echo "test"
+          echo "test=hello" >> "$GITHUB_OUTPUT"
           
   build:
     # The type of runner that the job will run on
@@ -48,6 +49,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - env:
+          OUTPUT1: ${{needs.get_files.outputs.output1}}
+          qtc_region_name: ${{ secrets.QTC_REGION_NAME }}
+          qtc_tenant_name: ${{ secrets.QTC_TENANT_NAME }}
+          qtc_token: ${{ secrets.QTC_TOKEN }}
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
@@ -86,11 +92,5 @@ jobs:
       - name: setup dependencies
         run: pip install -r requirements.txt
       - name: deploy project
-        env:
-          OUTPUT1: ${{needs.get_files.outputs.output1}}
-          qtc_region_name: ${{ secrets.QTC_REGION_NAME }}
-          qtc_tenant_name: ${{ secrets.QTC_TENANT_NAME }}
-          qtc_token: ${{ secrets.QTC_TOKEN }}
-        run: |
-          echo ${{needs.job1.outputs.output1}}
+        run: echo "$OUTPUT1"
           
