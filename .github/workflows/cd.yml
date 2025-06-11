@@ -30,7 +30,7 @@ jobs:
         run: |
           case '${{ github.event_name }}' in
             push)
-              firstCommit='${{ github.event.base_ref }}'
+              firstCommit='${{ github.event.commits[0].id }}'
               lastCommit='${{ github.event.before }}'
               ;;
             pull_request)
