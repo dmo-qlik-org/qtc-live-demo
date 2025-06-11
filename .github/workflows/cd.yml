@@ -90,5 +90,5 @@ jobs:
           qtc_tenant_name: ${{ secrets.QTC_TENANT_NAME }}
           qtc_token: ${{ secrets.QTC_TOKEN }}
         run: |
-          echo "$OUTPUT1"
+          echo ${{needs.job1.outputs.output1}}
           
