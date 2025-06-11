@@ -1,0 +1,61 @@
+{
+  "sourceDataEntityKey": {
+    "datasetId": "dept_emp-bsy0",
+    "name": "dept_emp",
+    "projectId": "{{ref(project.current.projectId)}}",
+    "taskId": "customer_xform2-hya-"
+  },
+  "mappingFields": [
+    {
+      "columnId": "emp_no",
+      "expression": {
+        "expressionStatement": "${emp_no}",
+        "alias": [
+          {
+            "name": "emp_no",
+            "value": "emp_no"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "dept_no",
+      "expression": {
+        "expressionStatement": "${dept_no}",
+        "alias": [
+          {
+            "name": "dept_no",
+            "value": "dept_no"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "from_date",
+      "expression": {
+        "expressionStatement": "${from_date}",
+        "alias": [
+          {
+            "name": "from_date",
+            "value": "from_date"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "to_date",
+      "expression": {
+        "expressionStatement": "${to_date}",
+        "alias": [
+          {
+            "name": "to_date",
+            "value": "to_date"
+          }
+        ]
+      }
+    }
+  ],
+  "id": "dept_emp_default_mapping-al5d",
+  "name": "dept_emp_default_mapping",
+  "description": ""
+}

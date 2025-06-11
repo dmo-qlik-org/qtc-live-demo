@@ -1,0 +1,20 @@
+{
+  "includePatterns": [],
+  "excludePatterns": [],
+  "explicitlySelected": [
+    {
+      "sourceProject": "{{project.DEV$_$Customer_360.projectId}}",
+      "sourceTask": "customer_storage-cz1d",
+      "name": "dept_emp",
+      "type": "NONE",
+      "sourceTableId": "dept_emp-1aqn"
+    },
+    {
+      "sourceProject": "{{project.DEV$_$Customer_360.projectId}}",
+      "sourceTask": "customer_storage-cz1d",
+      "name": "customer",
+      "type": "NONE",
+      "sourceTableId": "customer-cz1f"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "dept_emp-al5c",
+  "name": "dept_emp",
+  "type": "TRANSFORM_MODEL_BASED",
+  "inputDatasets": [
+    {
+      "datasetId": "dept_emp-bsy0",
+      "name": "dept_emp",
+      "projectId": "{{ref(project.current.projectId)}}",
+      "taskId": "customer_xform2-hya-"
+    }
+  ],
+  "datasetAttributes": {
+    "materialized": "INHERIT",
+    "hasHistory": "INHERIT",
+    "hasLiveViews": "OFF",
+    "hasChanges": "INHERIT",
+    "hasStandardViewsWithHeaders": "INHERIT",
+    "watermarkIncrementalSettings": "INHERIT"
+  },
+  "tableDef": {
+    "name": "dept_emp",
+    "columns": [
+      {
+        "name": "emp_no",
+        "ordinal": 1,
+        "nullable": false,
+        "primaryKeyOrdinal": 1,
+        "datatype": {
+          "type": "INT4",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "INTEGER"
+        },
+        "id": "emp_no",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "dept_no",
+        "ordinal": 2,
+        "nullable": false,
+        "primaryKeyOrdinal": 2,
+        "datatype": {
+          "type": "WSTRING",
+          "length": 4,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "NVARCHAR(4)"
+        },
+        "id": "dept_no",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "from_date",
+        "ordinal": 3,
+        "nullable": false,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "DATE",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "DATE"
+        },
+        "id": "from_date",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "to_date",
+        "ordinal": 4,
+        "nullable": false,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "DATE",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "DATE"
+        },
+        "id": "to_date",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      }
+    ],
+    "secureQri": "",
+    "fullLoadOnly": false
+  },
+  "virtualDataset": false,
+  "description": ""
+}
