@@ -100,7 +100,7 @@ jobs:
           while IFS= read -r line; do
             echo "$line"
             timestamp=$(date -u +"%Y-%m-%dT%H-%M-%SZ")
-            zipName="${line}_${timestamp}"
+            zipName="${line}_${timestamp}.zip"
             zip -r "$zipName" "di/projects/$line/"
             qtc_file_path="$zipName"
             python3 "$(pwd)/tools/qtc_deploy.py"
