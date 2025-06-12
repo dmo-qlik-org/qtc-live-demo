@@ -103,7 +103,7 @@ jobs:
             zipName="${line}_${timestamp}"
             zip -r "$zipName" "di/projects/$line/"
             qtc_file_path="$zipName"
-            py /tools/qtc_deploy.py
+            python3 /tools/qtc_deploy.py
           done <<< "$OUTPUT1"
           ls
       - name: test
