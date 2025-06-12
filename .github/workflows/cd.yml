@@ -94,6 +94,7 @@ jobs:
           qtc_token: ${{ secrets.QTC_TOKEN }}
           qtc_source_space: ${{ vars.QTC_SOURCE_SPACE }}
           qtc_target_space: ${{ vars.QTC_TARGET_SPACE }}
+          qtc_source_project: ''
           qtc_file_path: ''
         run: |
           [ -n "$OUTPUT1" ] &&
@@ -102,6 +103,7 @@ jobs:
             timestamp=$(date -u +"%Y-%m-%dT%H-%M-%SZ")
             zipName="${line}_${timestamp}.zip"
             zip -r "$zipName" "di/projects/$line/"
+            qtc_source_project="$line"
             qtc_file_path="$zipName"
             python3 "$(pwd)/tools/qtc_deploy.py"
           done <<< "$OUTPUT1"
