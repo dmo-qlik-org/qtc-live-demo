@@ -26,7 +26,7 @@
   },
   "customDatasetSettings": {
     "customSql": {
-      "expressionStatement": "SELECT * FROM ${customer}\nWHERE 1=18;",
+      "expressionStatement": "SELECT * FROM ${customer}\nWHERE 1=19;",
       "alias": [
         {
           "name": "customer",
