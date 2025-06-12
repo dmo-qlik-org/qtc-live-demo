@@ -86,9 +86,15 @@ jobs:
           repository: dmo-qlik-org/qtc-sdk
           token: ${{ secrets.PAT }}
           path: tools
-      - name: zip changes
+      - name: zip changes and deploy
         env:
           OUTPUT1: ${{needs.get_files.outputs.output1}}
+          qtc_region_name: ${{ vars.QTC_REGION_NAME }}
+          qtc_tenant_name: ${{ secrets.QTC_TENANT_NAME }}
+          qtc_token: ${{ secrets.QTC_TOKEN }}
+          qtc_source_space: ${{ vars.QTC_SOURCE_SPACE }}
+          qtc_target_space: ${{ vars.QTC_TARGET_SPACE }}
+          qtc_file_path: ''
         run: |
           [ -n "$OUTPUT1" ] &&
           while IFS= read -r line; do
@@ -96,12 +102,10 @@ jobs:
             timestamp=$(date -u +"%Y-%m-%dT%H-%M-%SZ")
             zipName="${line}_${timestamp}"
             zip -r "$zipName" "di/projects/$line/"
+            qtc_file_path="$zipName"
+            py /tools/qtc_deploy.py
           done <<< "$OUTPUT1"
           ls
-      - name: deploy
-        env:
-          qtc_region_name: ${{ vars.QTC_REGION_NAME }}
-          qtc_tenant_name: ${{ secrets.QTC_TENANT_NAME }}
-          qtc_token: ${{ secrets.QTC_TOKEN }}
+      - name: test
         run: |
           ls -lah
