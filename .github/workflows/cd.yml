@@ -109,7 +109,3 @@ jobs:
             qtc_file_path="$zipName"
             python3 "$(pwd)/tools/qtc_deploy.py"
           done <<< "$OUTPUT1"
-          ls
-      - name: test
-        run: |
-          ls -lah
