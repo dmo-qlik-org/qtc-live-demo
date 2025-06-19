@@ -15,8 +15,10 @@
     "materialized": true,
     "changeTablesEnabled": true,
     "currentTableSuffix": "__current",
+    "reloadType": "COMPARE_AND_APPLY_WITH_DELETED_ROWS",
     "artifactsPrefix": ""
   },
+  "fullLoadOnly": false,
   "artifactsLocation": {
     "internalSchema": "{{task.customer_storage-cz1d.internalSchema}}",
     "taskSchema": "{{task.customer_storage-cz1d.taskSchema}}",
@@ -27,6 +29,9 @@
     "warehouseSelection": {
       "warehouseName": "{{task.customer_storage-cz1d.warehouseName}}"
     }
+  },
+  "catalogIntegration": {
+    "publishDatasets": false
   },
   "tableTypeSettings": {
     "tableType": "REGULAR",

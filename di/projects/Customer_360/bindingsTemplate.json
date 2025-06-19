@@ -42,11 +42,8 @@
     "customer_xform-tsu2": "CUSTOMER_XForm"
   },
   "connectionProperties": {
-    "{{id(connection, DEV.SRC_MYSQL)}}": {
+    "task.customer_landing-cz1c.sourceConnection": {
       "type": "repsrc_mysql"
-    },
-    "{{id(connection, DEV.TGT_SNWFLK)}}": {
-      "type": "reptgt_qdisnowflake"
     }
   }
 }
