@@ -267,7 +267,7 @@
   },
   "customDatasetSettings": {
     "customSql": {
-      "expressionStatement": "SELECT * FROM ${customer}\nWHERE 1=4;",
+      "expressionStatement": "SELECT * FROM ${customer}\nWHERE 1=5;",
       "alias": [
         {
           "name": "customer",
