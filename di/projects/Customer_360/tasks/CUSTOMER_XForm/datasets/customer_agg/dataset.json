@@ -20,13 +20,254 @@
   },
   "tableDef": {
     "name": "customer_agg",
-    "columns": [],
+    "columns": [
+      {
+        "name": "customer_id",
+        "ordinal": 1,
+        "nullable": false,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "NUMERIC",
+          "length": 0,
+          "precision": 38,
+          "scale": 0,
+          "originalType": "NUMBER",
+          "originalTypeFull": "NUMBER(38,0)"
+        },
+        "id": "customer_id",
+        "flags": "NONE"
+      },
+      {
+        "name": "store_id",
+        "ordinal": 2,
+        "nullable": false,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "NUMERIC",
+          "length": 0,
+          "precision": 38,
+          "scale": 0,
+          "originalType": "NUMBER",
+          "originalTypeFull": "NUMBER(38,0)"
+        },
+        "id": "store_id",
+        "flags": "NONE"
+      },
+      {
+        "name": "first_name",
+        "ordinal": 3,
+        "nullable": false,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "STRING",
+          "length": 45,
+          "precision": 0,
+          "scale": 0,
+          "originalType": "VARCHAR",
+          "originalTypeFull": "VARCHAR(45)"
+        },
+        "id": "first_name",
+        "flags": "NONE"
+      },
+      {
+        "name": "last_name",
+        "ordinal": 4,
+        "nullable": false,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "STRING",
+          "length": 45,
+          "precision": 0,
+          "scale": 0,
+          "originalType": "VARCHAR",
+          "originalTypeFull": "VARCHAR(45)"
+        },
+        "id": "last_name",
+        "flags": "NONE"
+      },
+      {
+        "name": "email",
+        "ordinal": 5,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "STRING",
+          "length": 50,
+          "precision": 0,
+          "scale": 0,
+          "originalType": "VARCHAR",
+          "originalTypeFull": "VARCHAR(50)"
+        },
+        "id": "email",
+        "flags": "NONE"
+      },
+      {
+        "name": "address_id",
+        "ordinal": 6,
+        "nullable": false,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "NUMERIC",
+          "length": 0,
+          "precision": 38,
+          "scale": 0,
+          "originalType": "NUMBER",
+          "originalTypeFull": "NUMBER(38,0)"
+        },
+        "id": "address_id",
+        "flags": "NONE"
+      },
+      {
+        "name": "active",
+        "ordinal": 7,
+        "nullable": false,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "NUMERIC",
+          "length": 0,
+          "precision": 38,
+          "scale": 0,
+          "originalType": "NUMBER",
+          "originalTypeFull": "NUMBER(38,0)"
+        },
+        "id": "active",
+        "flags": "NONE"
+      },
+      {
+        "name": "create_date",
+        "ordinal": 8,
+        "nullable": false,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "DATETIME",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalType": "TIMESTAMPNTZ",
+          "originalTypeFull": "TIMESTAMPNTZ(0)"
+        },
+        "id": "create_date",
+        "flags": "NONE"
+      },
+      {
+        "name": "last_update",
+        "ordinal": 9,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "DATETIME",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalType": "TIMESTAMPNTZ",
+          "originalTypeFull": "TIMESTAMPNTZ(0)"
+        },
+        "id": "last_update",
+        "flags": "NONE"
+      },
+      {
+        "name": "new_column_ddl1",
+        "ordinal": 10,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "STRING",
+          "length": 100,
+          "precision": 0,
+          "scale": 0,
+          "originalType": "VARCHAR",
+          "originalTypeFull": "VARCHAR(100)"
+        },
+        "id": "new_column_ddl1",
+        "flags": "NONE"
+      },
+      {
+        "name": "new_column_ddl2",
+        "ordinal": 11,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "STRING",
+          "length": 100,
+          "precision": 0,
+          "scale": 0,
+          "originalType": "VARCHAR",
+          "originalTypeFull": "VARCHAR(100)"
+        },
+        "id": "new_column_ddl2",
+        "flags": "NONE"
+      },
+      {
+        "name": "test_column1",
+        "ordinal": 12,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "BOOLEAN",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalType": "BOOLEAN",
+          "originalTypeFull": "BOOLEAN"
+        },
+        "id": "test_column1",
+        "flags": "NONE"
+      },
+      {
+        "name": "test_column2",
+        "ordinal": 13,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "BOOLEAN",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalType": "BOOLEAN",
+          "originalTypeFull": "BOOLEAN"
+        },
+        "id": "test_column2",
+        "flags": "NONE"
+      },
+      {
+        "name": "test_column3",
+        "ordinal": 14,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "BOOLEAN",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalType": "BOOLEAN",
+          "originalTypeFull": "BOOLEAN"
+        },
+        "id": "test_column3",
+        "flags": "NONE"
+      },
+      {
+        "name": "test_column4",
+        "ordinal": 15,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "BOOLEAN",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalType": "BOOLEAN",
+          "originalTypeFull": "BOOLEAN"
+        },
+        "id": "test_column4",
+        "flags": "NONE"
+      }
+    ],
     "secureQri": "",
     "fullLoadOnly": false
   },
   "customDatasetSettings": {
     "customSql": {
-      "expressionStatement": "SELECT * FROM ${customer}\nWHERE 1=1;",
+      "expressionStatement": "SELECT * FROM ${customer}\nWHERE 1=2;",
       "alias": [
         {
           "name": "customer",
