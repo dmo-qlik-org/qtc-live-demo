@@ -25,7 +25,7 @@
         "name": "customer_id",
         "ordinal": 1,
         "nullable": false,
-        "primaryKeyOrdinal": 0,
+        "primaryKeyOrdinal": 1,
         "datatype": {
           "type": "NUMERIC",
           "length": 0,
@@ -267,7 +267,7 @@
   },
   "customDatasetSettings": {
     "customSql": {
-      "expressionStatement": "SELECT * FROM ${customer}\nWHERE 1=15;",
+      "expressionStatement": "SELECT * FROM ${customer}\nWHERE 1=1;",
       "alias": [
         {
           "name": "customer",
