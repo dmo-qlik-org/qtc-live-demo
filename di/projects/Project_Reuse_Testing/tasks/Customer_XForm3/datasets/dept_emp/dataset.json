@@ -4,6 +4,7 @@
   "type": "TRANSFORM_MODEL_BASED",
   "inputDatasets": [
     {
+      "type": "NONE",
       "datasetId": "dept_emp-bsy0",
       "name": "dept_emp",
       "projectId": "{{ref(project.current.projectId)}}",
