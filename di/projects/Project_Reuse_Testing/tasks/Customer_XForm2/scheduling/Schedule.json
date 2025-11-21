@@ -8,6 +8,7 @@
     "eventSchedulingType": "ANY_INPUT_TASK",
     "triggerApps": []
   },
+  "runOnReconnect": "ONSCHEDULED",
   "id": "schedule-hya_",
   "name": "Schedule",
   "description": "",

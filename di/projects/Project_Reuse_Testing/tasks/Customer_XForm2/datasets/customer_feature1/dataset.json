@@ -1,14 +1,14 @@
 {
-  "id": "customer_thin-v3va",
-  "name": "customer_thin",
+  "id": "customer_feature1-5mij",
+  "name": "customer_feature1",
   "type": "CUSTOM",
   "inputDatasets": [
     {
       "type": "NONE",
-      "datasetId": "customer-gkwo",
+      "datasetId": "customer-cz1f",
       "name": "customer",
-      "projectId": "{{ref(project.current.projectId)}}",
-      "taskId": "customer_xform2-hya-"
+      "projectId": "{{project.DEV$_$Customer_360.projectId}}",
+      "taskId": "customer_storage-cz1d"
     }
   ],
   "datasetAttributes": {
@@ -20,17 +20,19 @@
     "watermarkIncrementalSettings": "INHERIT"
   },
   "tableDef": {
-    "name": "customer_thin",
+    "name": "customer_feature1",
     "columns": [],
     "secureQri": "",
     "fullLoadOnly": false
   },
   "customDatasetSettings": {
     "customSql": {
-      "expressionStatement": "SELECT * FROM ${customer}\nWHERE 1=2;",
+      "expressionStatement": "SELECT \u0027customer_feature1\u0027 AS feature_flag",
       "alias": []
     },
-    "incremental": false
+    "incremental": false,
+    "text2sqlPrompt": "",
+    "text2sqlResult": ""
   },
   "virtualDataset": false,
   "description": ""

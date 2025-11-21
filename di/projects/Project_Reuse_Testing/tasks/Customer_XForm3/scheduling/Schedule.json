@@ -8,6 +8,7 @@
     "eventSchedulingType": "ANY_INPUT_TASK",
     "triggerApps": []
   },
+  "runOnReconnect": "ONSCHEDULED",
   "id": "schedule-al5b",
   "name": "Schedule",
   "description": "",

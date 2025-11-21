@@ -4,6 +4,7 @@
   "type": "TRANSFORM_MODEL_BASED",
   "inputDatasets": [
     {
+      "type": "NONE",
       "datasetId": "customer-gkwo",
       "name": "customer",
       "projectId": "{{ref(project.current.projectId)}}",
