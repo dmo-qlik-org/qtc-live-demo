@@ -29,7 +29,7 @@
   },
   "customDatasetSettings": {
     "customSql": {
-      "expressionStatement": "SELECT \u0027customer_feature4\u0027 AS feature_flag",
+      "expressionStatement": "SELECT \u0027customer_feature5\u0027 AS feature_flag",
       "alias": []
     },
     "incremental": false,
