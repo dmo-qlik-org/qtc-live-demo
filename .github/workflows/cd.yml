@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: checkout
         id: step1
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
       - name: get modified projects
@@ -52,10 +52,10 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       # sets up python environment for deployment utilities
       - name: setup python
-        uses: actions/setup-python@v5.6.0
+        uses: actions/setup-python@v6
         with:
           # Version range or exact version of Python or PyPy to use, using SemVer's version range syntax. Reads from .python-version if unset.
           python-version: '3.11.13' # optional
@@ -78,7 +78,7 @@ jobs:
           # When 'true', use the freethreaded version of Python.
           # freethreaded: # optional
       - name: setup tools
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: dmo-qlik-org/qtc-sdk
           token: ${{ secrets.PAT }}
