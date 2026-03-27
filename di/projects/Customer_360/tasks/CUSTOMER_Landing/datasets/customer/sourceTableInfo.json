@@ -153,7 +153,7 @@
           "scale": 0,
           "originalTypeFull": ""
         },
-        "id": "new_column_ddl1-312c",
+        "id": "new_column_ddl1",
         "flags": "NONE"
       },
       {
@@ -168,7 +168,7 @@
           "scale": 0,
           "originalTypeFull": ""
         },
-        "id": "new_column_ddl2-1643",
+        "id": "new_column_ddl2",
         "flags": "NONE"
       }
     ],

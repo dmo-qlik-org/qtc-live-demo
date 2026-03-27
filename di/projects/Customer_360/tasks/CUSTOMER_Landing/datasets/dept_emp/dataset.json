@@ -4,6 +4,7 @@
   "type": "LANDING",
   "inputDatasets": [
     {
+      "type": "NONE",
       "datasetId": "$replicate$employees_dept_emp",
       "name": "dept_emp",
       "projectId": "{{ref(project.current.projectId)}}",
