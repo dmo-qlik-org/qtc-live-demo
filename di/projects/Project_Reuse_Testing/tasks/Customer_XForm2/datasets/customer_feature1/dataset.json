@@ -17,7 +17,8 @@
     "hasLiveViews": "INHERIT",
     "hasChanges": "INHERIT",
     "hasStandardViewsWithHeaders": "INHERIT",
-    "watermarkIncrementalSettings": "INHERIT"
+    "watermarkIncrementalSettings": "INHERIT",
+    "createExternalArtifacts": "INHERIT"
   },
   "tableDef": {
     "name": "customer_feature1",
@@ -28,7 +29,7 @@
   },
   "customDatasetSettings": {
     "customSql": {
-      "expressionStatement": "SELECT \u0027customer_feature1_adjusted\u0027 AS feature_flag",
+      "expressionStatement": "SELECT \u0027customer_feature2\u0027 AS feature_flag",
       "alias": []
     },
     "incremental": false,
