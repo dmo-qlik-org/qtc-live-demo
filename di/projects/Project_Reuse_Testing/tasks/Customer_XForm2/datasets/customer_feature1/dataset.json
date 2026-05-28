@@ -1,13 +1,13 @@
 {
-  "id": "customer_agg-kdqz",
-  "name": "customer_agg",
+  "id": "customer_feature1-5mij",
+  "name": "customer_feature1",
   "type": "CUSTOM",
   "inputDatasets": [
     {
       "type": "NONE",
       "datasetId": "customer-cz1f",
       "name": "customer",
-      "projectId": "{{ref(project.current.projectId)}}",
+      "projectId": "{{project.DEV$_$Customer_360.projectId}}",
       "taskId": "customer_storage-cz1d"
     }
   ],
@@ -21,23 +21,20 @@
     "createExternalArtifacts": "INHERIT"
   },
   "tableDef": {
-    "name": "customer_agg",
+    "name": "customer_feature1",
     "columns": [],
-    "entityId": "customer_agg-kdqz",
+    "entityId": "customer_feature1-5mij",
     "secureQri": "",
     "fullLoadOnly": false
   },
   "customDatasetSettings": {
     "customSql": {
-      "expressionStatement": "SELECT * FROM ${customer}\nWHERE 1=1;",
-      "alias": [
-        {
-          "name": "customer",
-          "value": "{{ref(project.current.projectId)}}$_$customer_storage-cz1d$_$customer-cz1f"
-        }
-      ]
+      "expressionStatement": "SELECT \u0027customer_feature5\u0027 AS feature_flag",
+      "alias": []
     },
-    "incremental": false
+    "incremental": false,
+    "text2sqlPrompt": "",
+    "text2sqlResult": ""
   },
   "virtualDataset": false,
   "description": ""

@@ -1,7 +1,9 @@
 {
+  "materialized": false,
   "hasLiveViews": false,
   "hasHistory": true,
   "taskRuntime": {
+    "tableUpdateInterval": 15,
     "tableUpdateConcurrency": 10,
     "warehouseSelection": {
       "warehouseName": "{{task-type.transform.warehouseName}}",
@@ -11,6 +13,9 @@
   "taskRunSchedule": {
     "runInterval": 15,
     "schedulingType": "EVENT_BASED"
+  },
+  "catalogIntegration": {
+    "publishDatasets": false
   },
   "databaseSelection": {
     "databaseName": "{{task-type.transform.databaseName}}",

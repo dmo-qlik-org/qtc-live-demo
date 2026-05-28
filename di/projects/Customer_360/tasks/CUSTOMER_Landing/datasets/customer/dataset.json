@@ -4,6 +4,7 @@
   "type": "LANDING",
   "inputDatasets": [
     {
+      "type": "NONE",
       "datasetId": "$replicate$sakila_customer",
       "name": "customer",
       "projectId": "{{ref(project.current.projectId)}}",

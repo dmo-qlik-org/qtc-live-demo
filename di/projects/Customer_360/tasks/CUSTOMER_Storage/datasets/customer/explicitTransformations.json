@@ -19,7 +19,8 @@
         "ordinal": 0,
         "nullable": true,
         "addedColumnId": "9cc0635b-24b0-4127-a1eb-d753ce5a731e",
-        "markAsMetadata": false
+        "markAsMetadata": false,
+        "hash": false
       },
       {
         "action": "ADD",
@@ -39,7 +40,8 @@
         "ordinal": 0,
         "nullable": true,
         "addedColumnId": "adc3450e-548f-4384-8ce3-e51396bffc52",
-        "markAsMetadata": false
+        "markAsMetadata": false,
+        "hash": false
       },
       {
         "action": "ADD",
@@ -59,7 +61,8 @@
         "ordinal": 0,
         "nullable": true,
         "addedColumnId": "48b421e4-0931-4eef-a3f3-e8fc4cf98e42",
-        "markAsMetadata": false
+        "markAsMetadata": false,
+        "hash": false
       },
       {
         "action": "ADD",
@@ -79,7 +82,8 @@
         "ordinal": 0,
         "nullable": true,
         "addedColumnId": "0a52f9d2-1ab8-4012-83b5-1b1b910b8c10",
-        "markAsMetadata": false
+        "markAsMetadata": false,
+        "hash": false
       }
     ]
   },

@@ -6,12 +6,14 @@
       "RRULE:FREQ=MINUTELY;INTERVAL=15;BYSECOND=0"
     ],
     "startDateTime": "2024-11-26T15:56:18.413Z",
-    "timezone": "Etc/UTC"
+    "timezone": "Etc/UTC",
+    "fullloadInterval": 0
   },
   "eventBasedScheduling": {
     "eventSchedulingType": "ANY_INPUT_TASK",
     "triggerApps": []
   },
+  "runOnReconnect": "ONSCHEDULED",
   "id": "schedule-cz1e",
   "name": "Schedule",
   "description": "",

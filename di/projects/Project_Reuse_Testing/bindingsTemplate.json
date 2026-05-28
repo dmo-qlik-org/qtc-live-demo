@@ -9,6 +9,24 @@
     "task-type.datamart.databaseSelectionMethod": "",
     "task-type.datamart.warehouseName": "",
     "task-type.datamart.warehouseSelectionMethod": "",
+    "task-type.fileBasedKnowledgeMart.databricksVectorSearchEndpoint": "",
+    "task-type.fileBasedKnowledgeMart.indexDatabase": "",
+    "task-type.fileBasedKnowledgeMart.indexDatabaseSelectionMethod": "",
+    "task-type.fileBasedKnowledgeMart.llmConnection": "",
+    "task-type.fileBasedKnowledgeMart.vectorDbConnection": "",
+    "task-type.fileBasedKnowledgeMart.vectorDbTargetType": "",
+    "task-type.fileBasedKnowledgeMart.warehouseName": "",
+    "task-type.fileBasedKnowledgeMart.warehouseSelectionMethod": "",
+    "task-type.knowledgeMart.databaseName": "",
+    "task-type.knowledgeMart.databaseSelectionMethod": "",
+    "task-type.knowledgeMart.databricksVectorSearchEndpoint": "",
+    "task-type.knowledgeMart.indexDatabase": "",
+    "task-type.knowledgeMart.indexDatabaseSelectionMethod": "",
+    "task-type.knowledgeMart.llmConnection": "",
+    "task-type.knowledgeMart.vectorDbConnection": "",
+    "task-type.knowledgeMart.vectorDbTargetType": "",
+    "task-type.knowledgeMart.warehouseName": "",
+    "task-type.knowledgeMart.warehouseSelectionMethod": "",
     "task-type.landing.databaseName": "",
     "task-type.landing.databaseSelectionMethod": "",
     "task-type.landing.warehouseName": "",
@@ -36,9 +54,5 @@
     "customer_xform2-hya-": "Customer_XForm2",
     "customer_xform3-al5a": "Customer_XForm3"
   },
-  "connectionProperties": {
-    "{{id(connection, DEV.TGT_SNWFLK)}}": {
-      "type": "reptgt_qdisnowflake"
-    }
-  }
+  "connectionProperties": {}
 }

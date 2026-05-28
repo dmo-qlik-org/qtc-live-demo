@@ -4,6 +4,7 @@
   "type": "TRANSFORM_MODEL_BASED",
   "inputDatasets": [
     {
+      "type": "NONE",
       "datasetId": "customer-cz1f",
       "name": "customer",
       "projectId": "{{project.DEV$_$Customer_360.projectId}}",
@@ -16,7 +17,8 @@
     "hasLiveViews": "OFF",
     "hasChanges": "INHERIT",
     "hasStandardViewsWithHeaders": "INHERIT",
-    "watermarkIncrementalSettings": "INHERIT"
+    "watermarkIncrementalSettings": "INHERIT",
+    "createExternalArtifacts": "INHERIT"
   },
   "tableDef": {
     "name": "customer",

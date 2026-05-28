@@ -12,5 +12,6 @@
   "databaseSelection": {
     "databaseName": "{{task-type.registered.databaseName}}",
     "selectionMethod": "{{task-type.registered.databaseSelectionMethod}}"
-  }
+  },
+  "viewType": "DEFAULT"
 }

@@ -2,12 +2,14 @@
   "enabled": false,
   "schedulingType": "EVENT_BASED",
   "timeBasedScheduling": {
-    "schedule": []
+    "schedule": [],
+    "fullloadInterval": 0
   },
   "eventBasedScheduling": {
     "eventSchedulingType": "ANY_INPUT_TASK",
     "triggerApps": []
   },
+  "runOnReconnect": "ONSCHEDULED",
   "id": "schedule-al5b",
   "name": "Schedule",
   "description": "",

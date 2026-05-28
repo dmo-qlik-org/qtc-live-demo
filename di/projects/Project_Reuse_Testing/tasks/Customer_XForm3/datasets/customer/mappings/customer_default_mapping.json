@@ -1,5 +1,6 @@
 {
   "sourceDataEntityKey": {
+    "type": "NONE",
     "datasetId": "customer-gkwo",
     "name": "customer",
     "projectId": "{{ref(project.current.projectId)}}",
