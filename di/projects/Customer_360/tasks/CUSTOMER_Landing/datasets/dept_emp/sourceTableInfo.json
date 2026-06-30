@@ -1,7 +1,7 @@
 {
+  "type": "LANDING",
   "id": "$replicate$employees_dept_emp",
   "name": "employees_dept_emp",
-  "type": "LANDING",
   "tableDef": {
     "name": "dept_emp",
     "dbSchema": "{{task.customer_landing-cz1c:null$_$employees.schema}}",

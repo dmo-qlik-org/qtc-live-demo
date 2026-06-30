@@ -22,6 +22,5 @@
   "vectorDbTargetType": "{{task-type.knowledgeMart.vectorDbTargetType}}",
   "vectorDbConnection": "{{task-type.knowledgeMart.vectorDbConnection}}",
   "llmConnection": "{{task-type.knowledgeMart.llmConnection}}",
-  "llmSettings": {},
-  "fullLoadOnly": false
+  "llmSettings": {}
 }
