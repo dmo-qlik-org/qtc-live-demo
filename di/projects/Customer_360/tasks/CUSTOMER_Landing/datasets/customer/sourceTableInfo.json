@@ -1,7 +1,7 @@
 {
+  "type": "LANDING",
   "id": "$replicate$sakila_customer",
   "name": "sakila_customer",
-  "type": "LANDING",
   "tableDef": {
     "name": "customer",
     "dbSchema": "{{task.customer_landing-cz1c:null$_$sakila.schema}}",
