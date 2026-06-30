@@ -80,7 +80,7 @@ jobs:
       - name: setup tools
         uses: actions/checkout@v6
         with:
-          repository: dmo-qlik-org/qt-py
+          repository: dmo-qlik-org/qt-di
           token: ${{ secrets.PAT }}
           path: tools
           ref: env-management
